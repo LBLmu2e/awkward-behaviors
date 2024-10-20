@@ -7,3 +7,4 @@ A behavior can be defined on any composite type following the pattern exhibited 
 2. Subclass awkward.Record and define methods which implement the high-level functionality
 3. Subclass awkward.Array and defer the same functionality to the previously-defined record subclass
 4. Register the record and array subclasses with the type name, after any typedefs and template specializations
+5. Import the module containing the new functionality in the package init.
