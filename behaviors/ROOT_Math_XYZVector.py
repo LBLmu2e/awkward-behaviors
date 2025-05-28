@@ -19,8 +19,24 @@ class ROOT_Math_XYZVector(ak.Record):
         rv = self.fCoordinates.z()
         return rv
 
+    def X(self): return self.x()
+    def Y(self): return self.y()
+    def Z(self): return self.z()
+
     def magnitude(self):
         rv = ROOT_Math_Cartesian3D.magnitude(self)
+        return rv
+
+    def rho(self):
+        rv = ROOT_Math_Cartesian3D.rho(self)
+        return rv
+
+    def cosTheta(self):
+        rv = ROOT_Math_Cartesian3D.cosTheta(self)
+        return rv
+
+    def phi(self):
+        rv = ROOT_Math_Cartesian3D.phi(self)
         return rv
 
 RecordType = ROOT_Math_XYZVector
@@ -34,8 +50,22 @@ class ROOT_Math_XYZVector__Array(ak.Array):
     def z(self):
         rv = RecordType.z(self)
         return rv
+
+    def X(self): return self.x()
+    def Y(self): return self.y()
+    def Z(self): return self.z()
+
     def magnitude(self):
         rv = RecordType.magnitude(self)
+        return rv
+    def rho(self):
+        rv = RecordType.rho(self)
+        return rv
+    def cosTheta(self):
+        rv = RecordType.cosTheta(self)
+        return rv
+    def phi(self):
+        rv = RecordType.phi(self)
         return rv
 
 template = 'ROOT::Math::DisplacementVector3D<'  \
